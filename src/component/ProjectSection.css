@@ -1,0 +1,50 @@
+.ProjectSection{
+    width: 100%;
+    background: rgb(8, 8, 8);
+    color: white;
+    border-top: 1px solid rgb(28, 28, 28);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.ProjectSectionContainer {
+    max-width: 1200px;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Adjust the spacing between rows and columns */
+    margin: 0 auto; /* Center the grid container */
+  }
+
+  .ProjectSection p{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 30px;
+  }
+  
+
+  @media(max-width:768px){
+    .ProjectSection p{
+      font-size: 35px;
+    }
+  }
+  @media(max-width:625px){
+    .ProjectSection p{
+      font-size: 30px;
+    }
+  }
+  @media(max-width:575px){
+    .ProjectSection p{
+      font-size: 27px;
+    }
+  }
+  @media(max-width:425px){
+    .ProjectSection p{
+      font-size: 25px;
+    }
+  }
+  @media(max-width:375px){
+    .ProjectSection p{
+      font-size: 22px;
+    }
+  }

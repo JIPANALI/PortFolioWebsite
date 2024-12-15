@@ -1,0 +1,8 @@
+.ContactSecSection{
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}

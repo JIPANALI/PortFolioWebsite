@@ -1,0 +1,29 @@
+.ContactMeSection {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(17, 17, 17);
+    height: 70vh;
+    font-family: "IBM Plex Mono", serif !important;
+    background-image: url("../assets/ProtFolioFooter.png");
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: contain; /* Ensures the whole image fits inside */
+  }
+  
+.ContactMeSectionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+.ContactMeSectionContainer h1{
+    font-size: 35px;
+}

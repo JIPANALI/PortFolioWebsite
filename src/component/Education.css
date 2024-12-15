@@ -1,0 +1,85 @@
+.education-container {
+    /* background-color: black; */
+    color: white; /* White text for dark mode */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  
+  .education-container .ant-timeline {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the timeline */
+    margin: 0 auto;
+  }
+  
+  .education-container .ant-timeline-item {
+    /* background-color: #111111;  */
+    color: white;
+  }
+  
+  .education-container .ant-timeline-item-content {
+    color: white; /* Ensuring timeline item text is white */
+    padding-bottom: 50px;
+    inset-block-start: -11px !important;
+  }
+  
+  .education-container .ant-timeline-item-dot {
+    border-color: white; /* White dot color */
+  }
+  
+  .education-container .ant-timeline-item-tail {
+    border-color: white; /* White line connecting the dots */
+  }
+  
+  .education-container h1,
+  .education-container p {
+    color: white; /* Ensure text inside items is also white */
+  }
+  
+  .education-container .ant-timeline-item-content > h1,
+  .education-container .ant-timeline-item-content > p {
+    text-align: left; /* Center-align the text in each timeline item */
+  }
+  
+  .date{
+    font-size: 12px !important;
+    color: rgb(146, 142, 142) !important;
+  }
+
+
+  @media(max-width:768px){
+     .education-container .ant-timeline-item-content > h1{
+        font-size: 20px;
+     }
+  .education-container .ant-timeline-item-content > p {}
+  }
+  @media(max-width:625px){
+     .education-container .ant-timeline-item-content > h1,
+  .education-container .ant-timeline-item-content > p {}
+  }
+  @media(max-width:575px){
+     .education-container .ant-timeline-item-content > h1,
+  .education-container .ant-timeline-item-content > p {}
+  }
+  @media(max-width:625px){
+     .education-container .ant-timeline-item-content > h1{
+        font-size: 20px !important;
+     }
+  .education-container .ant-timeline-item-content > p {}
+  }
+  @media(max-width:425px){
+     .education-container .ant-timeline-item-content > h1,
+  .education-container .ant-timeline-item-content > p {}
+  }
+  @media(max-width:375px){
+     .education-container .ant-timeline-item-content > h1,
+  .education-container .ant-timeline-item-content > p {}
+  }
+  @media(max-width:360px){
+     .education-container .ant-timeline-item-content > h1,
+  .education-container .ant-timeline-item-content > p {}
+  }

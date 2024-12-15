@@ -1,0 +1,182 @@
+/* General styles for the header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    /* background-color: rgba(0, 0, 0, 0.3);  */
+    background-color: rgba(0, 0, 0, 0.926);
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: white;
+    font-family: "IBM Plex Mono", monospace;
+    border-bottom: 1px solid rgb(27, 27, 27);
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Desktop menu (visible in header by default for normal mode) */
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .logoImage{
+    width: auto;
+    height: 50px;
+    transform: rotateY('30')
+  }
+  @media (min-width: 1024px) {
+    .menu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .menu ul {
+      flex-direction: row; /* Horizontal menu */
+      gap: 2rem;
+    }
+  
+    .burger {
+      display: none; /* Hide the burger in normal mode */
+    }
+  }
+  
+  /* Menu items */
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Responsive dropdown menu (hidden by default for mobile mode) */
+  @media (max-width: 1024px) {
+    .menu {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+ 
+      background-color: rgba(0, 0, 0, 0.926); /* Black with 60% opacity */
+      backdrop-filter: blur(50px); /* Apply blur effect to the background */
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      z-index: 8 !important;
+    }
+  
+    .menu.menu-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      z-index: 8 !important;
+    }
+  
+    .menu ul {
+      flex-direction: column; /* Vertical menu */
+      align-items: center;
+      width: 100%;
+      padding: 1rem 0;
+      height: 100vh;
+    }
+  
+    .menu li {
+      margin: 1rem 0;
+    }
+  
+    .burger {
+      display: block; /* Show the burger on small screens */
+      position: absolute;
+      top: 15px;
+      right: 20px; /* Position it on the right side of the screen */
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+  
+  /* Hamburger menu button */
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  
+  /* Animations for the burger button */
+  .menu-open ~ .burger span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  
+  .menu-open ~ .burger span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .menu-open ~ .burger span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  
+
+  @media(max-width:575px){
+    .logoImage{
+      width: auto;
+      height: 32px;
+      transform: rotateY('30')
+    }
+
+    .burger span {
+      height: 2px;
+      width: 86%;
+    }
+  }
+  @media(max-width:425px){}
+  @media(max-width:375px){}

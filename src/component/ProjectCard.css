@@ -1,0 +1,88 @@
+.ProjectCard {
+    /* width: 190px; */
+    /* height: 254px; */
+    background-image: linear-gradient(163deg, #00ff7793 0%, #3700ff8e 100%);
+    border-radius: 16px;
+    transition: all 0.3s;
+    cursor: pointer;;
+  }
+  
+  .ProjectCard-inner {
+    /* width: 190px; */
+    /* height: 254px; */
+    background-color: #0e0e0e;
+    border-radius: 16px;
+    transition: all 0.2s;
+    padding: 8px 10px;
+  }
+  
+  .ProjectCard-inner:hover {
+    transform: scale(0.99);
+  }
+  
+  .ProjectCard:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+  }
+  
+
+  .ProjectCard-innerBigImg {
+    width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: center; /* Centers the image */
+    display: block; /* Removes any inline spacing issues */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    background-position: center; /* Centers the background image */
+    background-size: cover; /* Ensures the background fully covers the container */
+}
+
+
+  .ProjectCard-inner p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  .ProjectCard-innerdescription{
+    font-size: 14px;
+    color: rgb(172, 172, 172);
+    text-align: center;
+  }
+  .StakeBtnSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); /* Auto-adjust columns */
+    gap: 4px; /* Row and column gap */
+    width: 100%; /* Full width */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px;
+  }
+
+  .ProjectCardSpecification {
+    width: 100%; /* Full width */
+    margin-top: 10px;
+    font-size: 13px;
+    padding: 5px 18px;
+  
+  }
+  
+  .ProjectCardSpecification-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  
+  }
+  
+  .VisitSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    gap: 10px;
+  }
+  
+ 
+  

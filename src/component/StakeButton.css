@@ -1,0 +1,39 @@
+.StakeButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    fill: #bef2646d; /* Lime-400 */
+    background-color: #16653490; /* Lime-950 */
+    border-radius: 0.375rem; /* Rounded-md */
+    padding: 3px 5px;
+    transition: background-color 0.1s; /* duration-100 */
+    outline: none;
+    border: none;
+    border-radius: 16px;
+  }
+  
+  .StakeButton:hover {
+    background-color: #14532d; /* Lime-900 */
+  }
+  
+  .StakeButton:active {
+    border: 1px solid #bef264; /* Lime-400 */
+  }
+  
+  .StakeButton-icon {
+    margin-right: 0.5rem; /* Space between icon and text */
+  }
+  
+  .StakeButton-text {
+    font-size: 13px;
+    font-weight: 100;
+    color: #0ad2e8; /* Lime-400 */
+    padding-right: 0.25rem; /* pr-1 */
+  }
+  
+
+  .StakeBtnIcon{
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }

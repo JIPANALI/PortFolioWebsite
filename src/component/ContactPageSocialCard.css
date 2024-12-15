@@ -1,0 +1,66 @@
+.ContactPageSocialCard-card {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    justify-content: center;
+    background-color: transparent;
+  }
+  
+  /* Base container styles */
+  .ContactPageSocialCard-socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .ContactPageSocialCard-socialContainer:active {
+    transform: scale(0.9);
+  }
+  
+  /* Base icon styles */
+  .ContactPageSocialCard-socialSvg {
+    width: 20px;
+    fill: white;
+  }
+  
+  .ContactPageSocialCard-socialContainer:hover .ContactPageSocialCard-socialSvg {
+    animation: ContactPageSocialCard-slide-in-top 0.3s both;
+  }
+  
+  @keyframes ContactPageSocialCard-slide-in-top {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Section-specific styles */
+  /* Instagram */
+  .ContactPageSocialCard-instagram:hover {
+    background-color: #d62976;
+  }
+  
+  /* Facebook */
+  .ContactPageSocialCard-facebook:hover {
+    background-color: #101010;
+  }
+  
+  /* Twitter */
+  .ContactPageSocialCard-twitter:hover {
+    background-color: #1DA1F2;
+  }
+  
+  /* LinkedIn */
+  .ContactPageSocialCard-linkedin:hover {
+    background-color: #0077B5;
+  }
+  

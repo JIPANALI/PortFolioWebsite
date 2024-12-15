@@ -1,0 +1,46 @@
+/* Style for the Notification1 component */
+.Notification1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 150px;
+    right: 20px;
+  }
+  
+  /* Custom styling for the notification itself */
+  .custom-notification {
+    background-color: #06ee899b;  /* Set custom background color */
+    color: #e80c0c;  /* Set custom text color */
+    font-size: 14px;  /* Customize the font size */
+    border-radius: 8px;  /* Optional: add rounded corners */
+    padding: 12px;  /* Adjust padding */
+    /* height: 60px;  */
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Custom styling for the progress bar */
+  .custom-notification .ant-notification-progress-outer {
+    background-color: #1eff00 !important;  /* Set progress bar color */
+    height: 6px !important;  /* Set progress bar height */
+    border-radius: 2px;  /* Optional: round the corners of the progress bar */
+  }
+  
+  .custom-notification .ant-notification-progress-inner {
+    background: #84D65A;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+    color: rgb(255, 255, 255);
+    width: 300px;
+    height: 60px;
+  }
+  
+  /* Optional: Add hover effects */
+  .custom-notification:hover {
+    background-color: #5ee43cd2;  /* Change background color on hover */
+  }
+  

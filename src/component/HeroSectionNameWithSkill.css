@@ -1,0 +1,124 @@
+/* From Uiverse.io by kennyotsu */
+
+/* Loader style with increased font size */
+.HeroSectionNameWithSkill__loader {
+  color: rgb(255, 255, 255);
+  font-size: 60px; /* Updated font size */
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 82px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+/* Container for the words with overflow hidden */
+.HeroSectionNameWithSkill__words {
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+}
+
+.HeroSectionNameWithSkill__words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+/* Each word style with animation */
+.HeroSectionNameWithSkill__word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #956afa;
+  animation: HeroSectionNameWithSkill__spin_4991 4s infinite;
+}
+
+/* Animation for the words */
+@keyframes HeroSectionNameWithSkill__spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+
+
+
+@media(max-width:825px){
+  .HeroSectionNameWithSkill__loader {
+    font-size: 45px;
+    height: 70px;
+  }
+  }
+  @media(max-width:768px){
+  }
+  @media(max-width:675px){
+    .HeroSectionNameWithSkill__loader {
+      font-size: 35px;
+      height: 55px;
+    }
+  }
+  @media(max-width:575px){
+    .HeroSectionNameWithSkill__loader {
+      font-size: 28px;
+      height: 38px;
+    }
+  }
+  @media(max-width:475px){
+    .HeroSectionNameWithSkill__loader {
+      font-size: 24px;
+      height: 34px;
+    }
+  }
+  @media(max-width:425px){
+    .HeroSectionNameWithSkill__loader {
+      font-size: 22px;
+      height: 30px;
+    }
+  }
+ 

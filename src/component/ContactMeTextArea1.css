@@ -1,0 +1,42 @@
+.ContactMeTextArea1-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .ContactMeTextArea1-textarea {
+    border: solid 1.5px #2fcaf4;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    min-height: 8rem; /* Minimum height */
+    color: #f5f5f5;
+    resize: none; /* Prevent manual resizing */
+    transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden; /* Prevent scrollbars */
+  }
+  
+  .ContactMeTextArea1-label {
+    position: absolute;
+    left: 15px;
+    color: #e8e8e8 !important;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .ContactMeTextArea1-textarea:focus,
+  .ContactMeTextArea1-textarea:valid {
+    outline: none;
+    border: 1.5px solid #1a73e8;
+  }
+  
+  .ContactMeTextArea1-textarea:focus ~ .ContactMeTextArea1-label,
+  .ContactMeTextArea1-textarea:valid ~ .ContactMeTextArea1-label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #212121;
+    padding: 0 0.2em;
+    color: #2196f3;
+  }
+  

@@ -1,0 +1,444 @@
+/* .ResumeButton-container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ResumeButton-label {
+    background-color: transparent;
+    border: 2px solid rgb(91, 91, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 160px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .ResumeButton-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    transition: all 0.4s ease;
+    border-radius: 100%;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .ResumeButton-input {
+    display: none;
+  }
+  
+  .ResumeButton-title {
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 18px;
+    bottom: 14px;
+    text-align: center;
+  }
+  
+  .ResumeButton-circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgb(91, 91, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  .ResumeButton-circle .ResumeButton-icon {
+    color: #fff;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .ResumeButton-circle .ResumeButton-square {
+    aspect-ratio: 1;
+    width: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .ResumeButton-circle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #3333a8;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .ResumeButton-label:has(.ResumeButton-input:checked) {
+    width: 57px;
+    animation: ResumeButton-installed 0.4s ease 3.5s forwards;
+  }
+  
+  .ResumeButton-label:has(.ResumeButton-input:checked)::before {
+    animation: ResumeButton-rotate 3s ease-in-out 0.4s forwards;
+  }
+  
+  .ResumeButton-input:checked + .ResumeButton-circle {
+    animation: ResumeButton-pulse 1s forwards, ResumeButton-circleDelete 0.2s ease 3.5s forwards;
+    rotate: 180deg;
+  }
+  
+  .ResumeButton-input:checked + .ResumeButton-circle::before {
+    animation: ResumeButton-installing 3s ease-in-out forwards;
+  }
+  
+  .ResumeButton-input:checked + .ResumeButton-circle .ResumeButton-icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .ResumeButton-input:checked ~ .ResumeButton-circle .ResumeButton-square {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .ResumeButton-input:checked ~ .ResumeButton-title {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .ResumeButton-input:checked ~ .ResumeButton-title:last-child {
+    animation: ResumeButton-showInstalledMessage 0.4s ease 3.5s forwards;
+  }
+  
+  @keyframes ResumeButton-pulse {
+    0% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+      scale: 1;
+      box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+    100% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes ResumeButton-installing {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  @keyframes ResumeButton-rotate {
+    0% {
+      transform: rotate(-90deg) translate(27px) rotate(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    99% {
+      transform: rotate(270deg) translate(27px) rotate(270deg);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes ResumeButton-installed {
+    100% {
+      width: 150px;
+      border-color: rgb(35, 174, 35);
+    }
+  }
+  
+  @keyframes ResumeButton-circleDelete {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes ResumeButton-showInstalledMessage {
+    100% {
+      opacity: 1;
+      visibility: visible;
+      right: 56px;
+    }
+  }
+  
+
+  .ResumeButton-downloading {
+    animation: ResumeButton-downloadingEffect 3s linear infinite;
+    cursor: not-allowed;
+  }
+  
+  @keyframes ResumeButton-downloadingEffect {
+    0% {
+      box-shadow: 0 0 0 0 rgba(91, 91, 240, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 10px 10px rgba(91, 91, 240, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(91, 91, 240, 0);
+    }
+  }
+   */
+
+
+   .ResumeButton-container {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ResumeButton-label {
+    background-color: transparent;
+    border: 2px solid rgb(91, 91, 240);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    width: 140px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .ResumeButton-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 8px;
+    height: 8px;
+    transition: all 0.4s ease;
+    border-radius: 100%;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .ResumeButton-input {
+    display: none;
+  }
+  
+  .ResumeButton-title {
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 14px;
+    /* bottom: 14px; */
+    text-align: center;
+  }
+  
+  .ResumeButton-circle {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: rgb(91, 91, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+    overflow: hidden;
+  }
+  
+  .ResumeButton-circle .ResumeButton-icon {
+    color: #fff;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .ResumeButton-circle .ResumeButton-square {
+    aspect-ratio: 1;
+    width: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  
+  .ResumeButton-circle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #3333a8;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .ResumeButton-label:has(.ResumeButton-input:checked) {
+    width: 45px;
+    animation: ResumeButton-installed 0.4s ease 3.5s forwards;
+  }
+  
+  .ResumeButton-label:has(.ResumeButton-input:checked)::before {
+    animation: ResumeButton-rotate 3s ease-in-out 0.4s forwards;
+  }
+  
+  .ResumeButton-input:checked + .ResumeButton-circle {
+    animation: ResumeButton-pulse 1s forwards, ResumeButton-circleDelete 0.2s ease 3.5s forwards;
+    rotate: 180deg;
+  }
+  
+  .ResumeButton-input:checked + .ResumeButton-circle::before {
+    animation: ResumeButton-installing 3s ease-in-out forwards;
+  }
+  
+  .ResumeButton-input:checked + .ResumeButton-circle .ResumeButton-icon {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .ResumeButton-input:checked ~ .ResumeButton-circle .ResumeButton-square {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .ResumeButton-input:checked ~ .ResumeButton-title {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .ResumeButton-input:checked ~ .ResumeButton-title:last-child {
+    animation: ResumeButton-showInstalledMessage 0.4s ease 3.5s forwards;
+  }
+  
+  @keyframes ResumeButton-pulse {
+    0% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+      scale: 1;
+      box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+    }
+    100% {
+      scale: 0.95;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes ResumeButton-installing {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
+  @keyframes ResumeButton-rotate {
+    0% {
+      transform: rotate(-90deg) translate(27px) rotate(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    99% {
+      transform: rotate(270deg) translate(27px) rotate(270deg);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes ResumeButton-installed {
+    100% {
+      width: 120px;
+      border-color: rgb(35, 174, 35);
+    }
+  }
+  
+  @keyframes ResumeButton-circleDelete {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @keyframes ResumeButton-showInstalledMessage {
+    100% {
+      opacity: 1;
+      visibility: visible;
+      right: 37px;
+    }
+  }
+  
+
+  .ResumeButton-downloading {
+    animation: ResumeButton-downloadingEffect 3s linear infinite;
+    cursor: not-allowed;
+  }
+  
+  @keyframes ResumeButton-downloadingEffect {
+    0% {
+      box-shadow: 0 0 0 0 rgba(91, 91, 240, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 10px 10px rgba(91, 91, 240, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(91, 91, 240, 0);
+    }
+  }
+  

@@ -1,0 +1,85 @@
+.SkillSection {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.SkillSectionContainer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.SkillSectionContainer h1 {
+    font-size: 35px;
+    z-index: 2;
+    color: white;
+}
+
+.SkillSectionContainerContent {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr); /* 4 sections in a row */
+    z-index: 2;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .SkillSectionContainerContent {
+        grid-template-columns: repeat(2, 1fr); /* 2 sections in a row */
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+}
+
+
+
+
+@media(max-width:768px){
+    .SkillSectionContainer h1{
+      font-size: 35px;
+    }
+  }
+  @media(max-width:625px){
+    .SkillSectionContainer h1{
+      font-size: 30px;
+    }
+    .SkillSectionContainerContent {
+        grid-template-columns: 1fr; /* 1 section per row */
+    }
+  }
+  @media(max-width:575px){
+    .SkillSectionContainer h1{
+      font-size: 27px;
+    }
+ 
+  }
+  @media(max-width:425px){
+    .SkillSectionContainer h1{
+      font-size: 25px;
+    }
+  }
+  @media(max-width:375px){
+    .SkillSectionContainer h1{
+      font-size: 22px;
+    }
+  }
