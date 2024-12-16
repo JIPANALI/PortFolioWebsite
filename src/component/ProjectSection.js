@@ -13,7 +13,7 @@ import mongodb from "../assets/mongodb.png"
 import sql from "../assets/sql.png"
 
 // ProjectBigPic
-import githPic from "../../src/assets/githubPicExample.png"
+import githPic from "../../src/assets/githubPicExample.jpg"
 
 const ProjectSection = () => {
 
